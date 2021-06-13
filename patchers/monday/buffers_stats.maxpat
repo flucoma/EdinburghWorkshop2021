@@ -10,8 +10,8 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 248.0, 91.0, 917.0, 939.0 ],
-		"bglocked" : 0,
+		"rect" : [ 124.0, 91.0, 1307.0, 939.0 ],
+		"bglocked" : 1,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
@@ -39,6 +39,47 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontsize" : 8.0,
+					"id" : "obj-47",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1028.0, 453.0, 157.0, 15.0 ],
+					"text" : "psst, colls are easier to sort than buffers..."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 14.0,
+					"id" : "obj-21",
+					"linecount" : 20,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 961.0, 149.0, 287.0, 319.0 ],
+					"presentation_linecount" : 29,
+					"text" : "Then that's our fault, not yours ;-) \n\nTry and concretise it as you go by aiming to make a player that will play back chunks in (say) ascending order of some statistic on some feature.\n\n* What would a sample player that plays back sample slices in ascdending order of pitch sound like? \n* Without any statistics, how much identity of the original file might remain? \n* What would happen if you started statistically summarising chunks and playing these back in ascending order instead? \n\n(hint, the fluid.bufstats~ help file has some machinery for playing back like this; see the 'musical example' tab; other approaches are possible!)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Lato",
+					"fontsize" : 18.0,
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 980.0, 97.0, 261.0, 28.0 ],
+					"presentation_linecount" : 2,
+					"text" : "If this all seems a bit abstract",
+					"textcolor" : [ 1.0, 0.392156862745098, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-46",
 					"linecount" : 3,
@@ -68,8 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 56.0, 726.000005006790161, 277.0, 33.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 56.0, 726.000005006790161, 280.0, 33.0 ],
 					"text" : "fluid.buf.stack will stack multichannel buffers into a new buffer",
 					"textcolor" : [ 0.129411764705882, 0.129411764705882, 0.129411764705882, 0.5 ]
 				}
@@ -145,8 +185,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 173.0, 567.5, 616.0, 53.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 16.0, 581.5, 616.0, 53.0 ],
 					"text" : "What if instead, we chop a buffer into segments, and then summarise the segments? \n\nHave a go; you might want a slicer, or you might want to experiment with equal sized chunks. ",
 					"textcolor" : [ 1.0, 0.392156862745098, 0.0, 1.0 ]
 				}
@@ -184,7 +223,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 751.421054363250732, 291.5, 148.0, 47.0 ],
-					"presentation_linecount" : 2,
 					"text" : "scroll down depending on the number of source descriptors",
 					"textcolor" : [ 0.0, 0.0, 0.0, 0.74 ]
 				}
@@ -198,8 +236,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 173.0, 519.5, 616.0, 38.0 ],
-					"presentation_linecount" : 9,
+					"patching_rect" : [ 16.0, 533.5, 616.0, 38.0 ],
 					"text" : "That's all very well. However, if we have a longer analysis full of interesting moments, then reducing the whole thing to 7 numbers (or 14, or 21 etc) possibly isn't, uh, expressive. ",
 					"textcolor" : [ 1.0, 0.392156862745098, 0.0, 1.0 ]
 				}
@@ -212,9 +249,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 557.421054363250732, 367.5, 242.0, 33.0 ],
-					"presentation_linecount" : 2,
-					"text" : "if increase this and reprocess, scroll along to see the new columns",
+					"patching_rect" : [ 557.421054363250732, 367.5, 190.052631616592407, 33.0 ],
+					"text" : "increase this and reprocess, scroll along to see the new columns",
 					"textcolor" : [ 0.0, 0.0, 0.0, 0.74 ]
 				}
 
@@ -226,8 +262,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 221.0, 282.0, 47.0 ],
-					"presentation_linecount" : 3,
+					"patching_rect" : [ 523.0, 181.0, 282.0, 47.0 ],
 					"text" : "multichannel behaviour is same as other buf* objects: for each input channel, you get an extra output. "
 				}
 
@@ -235,12 +270,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 356.421054363250732, 427.5, 349.47368597984314, 74.0 ],
-					"presentation_linecount" : 10,
+					"patching_rect" : [ 213.5, 439.0, 411.5, 60.0 ],
 					"text" : "these can help model short temporal dependencies in the data. \n\nBut you can end up with a lot of numbers to keep track of! e.g. for 12 MFCC input and 1 derivative, you'll have 12 channels and 14 frames",
 					"textcolor" : [ 0.0, 0.0, 0.0, 0.74 ]
 				}
@@ -250,13 +284,12 @@
 				"box" : 				{
 					"fontsize" : 14.0,
 					"id" : "obj-18",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 356.421054363250732, 367.5, 194.0, 53.0 ],
-					"presentation_linecount" : 4,
-					"text" : "you can also generate stats of derivates (so, 7 extra columns per derivative)",
+					"patching_rect" : [ 192.0, 367.5, 284.0, 38.0 ],
+					"text" : "you can also generate stats of derivates \n(=> 7 extra columns per derivative)",
 					"textcolor" : [ 1.0, 0.392156862745098, 0.0, 1.0 ]
 				}
 
@@ -268,8 +301,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 276.0, 199.0, 150.0, 33.0 ],
-					"text" : "lets throw them in a jit.matrix for viewing"
+					"patching_rect" : [ 259.0, 199.0, 150.0, 33.0 ],
+					"text" : "lets throw them in a coll for viewing"
 				}
 
 			}
@@ -280,7 +313,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 523.0, 149.0, 282.0, 60.0 ],
+					"patching_rect" : [ 523.0, 117.0, 282.0, 60.0 ],
 					"text" : "stats go in here: \n– 7 statistics per source channel, per derivate \n– so stats buffer~s *aren't time series* \n– which makes them a bit of a pain  "
 				}
 
@@ -293,7 +326,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 259.0, 89.0, 174.0, 38.0 ],
+					"patching_rect" : [ 259.0, 89.0, 177.0, 38.0 ],
 					"text" : "change this to some buffer of features you have",
 					"textcolor" : [ 1.0, 0.392156862745098, 0.0, 1.0 ]
 				}
@@ -1430,7 +1463,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 202.0, 199.0, 61.0, 22.0 ],
+					"patching_rect" : [ 202.0, 199.0, 47.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1438,7 +1471,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p tomatrix"
+					"text" : "p tocoll"
 				}
 
 			}
@@ -1554,7 +1587,58 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 202.0, 377.0, 150.0, 22.0 ]
+					"patching_rect" : [ 202.0, 411.0, 150.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"border" : 2,
+					"bordercolor" : [ 0.352941176470588, 0.352941176470588, 0.352941176470588, 1.0 ],
+					"id" : "obj-9",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 941.5, 89.0, 335.0, 425.0 ],
+					"proportion" : 0.5
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"border" : 2,
+					"bordercolor" : [ 0.352941176470588, 0.352941176470588, 0.352941176470588, 1.0 ],
+					"id" : "obj-7",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 89.0, 925.0, 425.0 ],
+					"proportion" : 0.5
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"border" : 2,
+					"bordercolor" : [ 0.352941176470588, 0.352941176470588, 0.352941176470588, 1.0 ],
+					"id" : "obj-1",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 522.0, 925.0, 397.0 ],
+					"proportion" : 0.5
 				}
 
 			}
@@ -1583,7 +1667,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 211.5, 418.0, 83.789472818374634, 418.0, 83.789472818374634, 157.0, 211.5, 157.0 ],
+					"midpoints" : [ 211.5, 484.0, 83.789472818374634, 484.0, 83.789472818374634, 157.0, 211.5, 157.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
