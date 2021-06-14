@@ -28,3 +28,11 @@ We haven't yet played with the `buffer~` based slicers. The output of these is n
 This is a bit of a deep-end task; please shout absolutely *as soon* as you want hints, explanations, us to patch it through, whatever. We want to see what makes sense at this stage :-D
 
 **When you're done, make sure to save your assembled corpus (however you've assembled it)** 
+
+## Epilogue 
+
+If you open some of the FluCoMa examples (`~/Documents/Max 8/Packages/FluCoMa/dataset/1-learning examples/`), say `10a-weighted-MFCCs-comparison.maxpat` you'll see that there's a set of corpus building abstractions (which you may also have noticed when we looked at the FluCoMa overview).
+
+So why have we just done all that? Well, those abstractions – and what makes them helpful – are much easier to grasp if you've been through the steps at least once. 
+
+They're also quite opinionated about how a corpus should be put together, and different boilerplate-saving ways of going about it could be equally useful. 
